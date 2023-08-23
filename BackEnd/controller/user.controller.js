@@ -52,7 +52,7 @@ const login = async (req, res) => {
       expiresIn: "1h",
     });
 
-    res.send({
+    res.status(200).send({
       message: "Login successful",
       user: { _id, name, email: user.email },
       token: token,
