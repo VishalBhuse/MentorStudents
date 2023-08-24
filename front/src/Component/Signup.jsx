@@ -8,6 +8,7 @@ import {
   FormControl,
   FormLabel,
   useToast,
+  Image,
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -94,17 +95,15 @@ const Signup = () => {
       m="auto"
       my="1rem"
     >
-      <Box
-        display={{ base: "none", md: "block" }}
-        w="40%"
-        h="500px"
-        p="50px"
-        borderRadius={"20px"}
-        bg={`url(https://t3.ftcdn.net/jpg/05/65/46/48/360_F_565464881_20xX2xgiQ0UAeKZeHbFwArcD9DYOJsEi.jpghttps://t3.ftcdn.net/jpg/05/65/46/48/360_F_565464852_JoSSg4Tcag8U0AMkEXt7VgoHvZRIgBRT.jpg)`}
-      >
-        <Heading color="teal.400" mb="sm">
-          Welcome
-        </Heading>
+      <Box display={{ base: "none", md: "block" }} w="50%" h="100%" p="50px">
+        <Image
+          borderRadius={"20px"}
+          alt={"Login Image"}
+          objectFit={"cover"}
+          src={
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+          }
+        />
       </Box>
       <Box w={{ base: "98%", md: "40%" }} p="30px" borderRadius="10px">
         <Heading

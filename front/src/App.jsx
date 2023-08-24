@@ -1,21 +1,21 @@
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./Component/Login";
-import Signup from "./Component/Signup";
-import Store from "./Redux/Store";
 import { Provider } from "react-redux";
+import Store from "./Redux/Store";
+import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import Signup from "./Component/Signup";
+import Login from "./Component/Login";
 import RecordingPage from "./Component/RecordingPage";
 import RecordedVideos from "./Component/RecordedVideos";
-import Navbar from "./Component/Navbar";
 import RequireAuth from "./HOC/RequiredAuth";
 
 const App = () => {
   return (
-    <Provider store={Store}>
-      <ChakraProvider>
-        <BrowserRouter>
+    <ChakraProvider>
+      <BrowserRouter>
+        <Provider store={Store}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Login />} />
@@ -38,9 +38,9 @@ const App = () => {
             />
           </Routes>
           <Footer />
-        </BrowserRouter>
-      </ChakraProvider>
-    </Provider>
+        </Provider>
+      </BrowserRouter>
+    </ChakraProvider>
   );
 };
 
